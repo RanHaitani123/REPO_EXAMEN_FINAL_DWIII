@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Examen Bimestral</title>
+    <link rel="icon" type="image/png" href="images/favicon.png" />
+    <link href="https://fonts.googleapis.com/css?family=Fjalla+One|Source+Sans+Pro" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="css/media.css" media="screen and (max-width:768px)"/> -->
+    <link rel="stylesheet" href="css/estilos.css">
+    <!-- <style>
+      @media screen and (max-width: 768px) {
+        body {
+          border: 10px solid blue;
+        }
+      }
+    </style> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1"> 
+  </head>
+  <body>
+    <i class="icon-menu burger-button" id="burger-menu"></i>
+    <header class="header">
+      <div class="container">
+        <h1 class="logo">RoboCrhistian</h1>  
+        <nav class="menu">   <!-- en esta seccio va el texto del logotipo -->
+          <ol>
+    
+              <a class="link" href="#contacto">acerca de</a>   <!-- este es para el apartado acerca de -->
+            </li>
+          </ol>
+        </nav>
+      </div>
+    </header>
+    <section class="hero">
+
+    </section>
+    <section id="portafolio" class="portfolio">
+      <div class="container">
+        <center><h2>En cuanto a tu nueva estrategia</h2></center>
+        <center><h3>Estoy haciendo pruebas aún. No se me agiten por favor, lo bueno tarda en llegar</h3></center>
+        <center><button type="button" class="black-button">Mi Botón</button></center>
+        <br>
+      
+      
+        <article class="project">
+          <div class="project-details">
+            <!-- Eliminado todo el texto -->
+          </div>
+          <figure class="project-imageContainer">
+            <img class="project-image" width="500" src="images/4b_pintura_abstracta.jpg" alt="prouyecto del curso de React Native">
+          </figure>
+        </article>
+        <article class="project">
+          <div class="project-details">
+            <!-- Eliminado todo el texto -->
+          </div>
+          <figure class="project-imageContainer">
+           <p>Animes</p>
+
+           <p>tokyo Ghoul</p>
+           <p>School Days</p>
+           <p>Clasroom od the Elite</p>
+          </figure>
+        </article>
+        
+        
+    
+    <footer class="footer">
+      <div class="container">
+        <center>
+        <div>
+          <p>Un intelectual es el que dice una cosa siemple de un modo complicado. Un artista es el que dice 
+            una cosa complicada de un modo simple
+          </p>
+          <p>Charle Bukowski</p>
+          <p>Escritor</p>
+        </div>
+      </div>
+    </center>
+    </footer>
+    <script>
+      // console.log('Hola mundo! es mi primera linea en JS');
+      const ipad = window.matchMedia('screen and (max-width: 767px)')
+      const menu = document.querySelector('.menu');
+      // console.log(menu);
+      const burgerButton = document.querySelector('#burger-menu');
+      // console.log(burgerButton);
+
+
+      ipad.addListener(validation)
+
+      function validation(event) {
+        if (event.matches) {
+          burgerButton.addEventListener('click', hideShow)
+        } else {
+          burgerButton.removeEventListener('click', hideShow)
+        }
+      }
+      validation(ipad);
+
+
+      function hideShow() {
+        if (menu.classList.contains('is-active')) {
+          menu.classList.remove('is-active');
+        } else {
+          menu.classList.add('is-active');
+        }
+      }
+    </script>
+  </body>
+</html>
